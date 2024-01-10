@@ -29,7 +29,7 @@ export default function TodoApp(){
     }
 
     function handleDelete(id){
-        const temp = todos.filter(item => item.id != id)
+        const temp = todos.filter(item => item.id !== id)
 
         setTodos(temp)
     }
@@ -44,6 +44,7 @@ export default function TodoApp(){
 
     return (
     <div className="todoContainer">
+        <h1>ToDo App</h1>
         <form className="todoCreateForm" onSubmit={handleSubmit}>
             <input onChange={handleChange} className="todoInput"value={title}/>
             <input onClick={handleSubmit } type="submit" value="Create todo" className="buttonCreate"></input>
